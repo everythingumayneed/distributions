@@ -57,6 +57,7 @@ NodeSource will maintain Ubuntu distributions in active support by Canonical, in
 * **Ubuntu 16.04 LTS** (Xenial Xerus)
 * **Ubuntu 16.10** (Yakkety Yak)
 * **Ubuntu 17.04** (Zesty Zappus)
+* **Ubuntu 17.10** (Artful Aardvark)
 
 **Supported Debian versions:**
 
@@ -65,6 +66,7 @@ NodeSource will maintain support for stable, testing and unstable releases of De
 * **Debian 7** (wheezy) [Node.js > 6.x is not supported on Debian Wheezy]
 * **Debian 8 / stable** (jessie)
 * **Debian 9** (stretch)
+* **Debian 10 / testing** (buster)
 * **Debian unstable** (sid)
 
 **Supported Linux Mint versions:**
@@ -97,6 +99,20 @@ NodeSource will maintain support for stable, testing and unstable releases of De
 <a name="debinstall"></a>
 ### Installation instructions
 
+**Node.js v9.x**:
+
+* NOTE: Debian Wheezy packages are NOT available for this release. Please reference [running Node.js >= 4.x on older distros](https://github.com/nodesource/distributions/blob/master/OLDER_DISTROS.md).
+
+```sh
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_9.x | bash -
+apt-get install -y nodejs
+```
+
 **Node.js v8.x**:
 
 * NOTE: Debian Wheezy packages are NOT available for this release. Please reference [running Node.js >= 4.x on older distros](https://github.com/nodesource/distributions/blob/master/OLDER_DISTROS.md).
@@ -111,20 +127,6 @@ curl -sL https://deb.nodesource.com/setup_8.x | bash -
 apt-get install -y nodejs
 ```
 
-**Node.js v7.x**:
-
-* NOTE: Debian Wheezy packages are NOT available for this release. Please reference [running Node.js >= 4.x on older distros](https://github.com/nodesource/distributions/blob/master/OLDER_DISTROS.md).
-
-```sh
-# Using Ubuntu
-curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-# Using Debian, as root
-curl -sL https://deb.nodesource.com/setup_7.x | bash -
-apt-get install -y nodejs
-```
-
 **Node.js v6.x**:
 
 * NOTE: If you are using Debian Wheezy, you might want to read about [running Node.js >= 4.x on older distros](https://github.com/nodesource/distributions/blob/master/OLDER_DISTROS.md).
@@ -136,20 +138,6 @@ sudo apt-get install -y nodejs
 
 # Using Debian, as root
 curl -sL https://deb.nodesource.com/setup_6.x | bash -
-apt-get install -y nodejs
-```
-
-**Node.js v5.x**:
-
-* NOTE: If you are using Debian Wheezy, you might want to read about [running Node.js >= 4.x on older distros](https://github.com/nodesource/distributions/blob/master/OLDER_DISTROS.md).
-
-```sh
-# Using Ubuntu
-curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-# Using Debian, as root
-curl -sL https://deb.nodesource.com/setup_5.x | bash -
 apt-get install -y nodejs
 ```
 
@@ -299,14 +287,12 @@ NodeSource will continue to maintain the following architectures and may add add
 
 **Supported Red Hat® Enterprise Linux® versions:**
 
-* **RHEL 5** (32-bit and 64-bit) **[For Node < 0.12.x]**
 * **RHEL 6** (32-bit and 64-bit) **[For Node < 4.x]**
 * **RHEL 6** (64-bit) **[For Node >= 4.x]**
 * **RHEL 7** (64-bit)
 
 **Supported CentOS versions:**
 
-* **CentOS 5** (32-bit and 64-bit) **[For Node < 0.12.x]**
 * **CentOS 6** (32-bit and 64-bit) **[For Node < 4.x]**
 * **CentOS 6** (64-bit) **[For Node >= 4.x]**
 * **CentOS 7** (64-bit)
@@ -316,8 +302,8 @@ NodeSource will continue to maintain the following architectures and may add add
 
 **Supported Fedora versions:**
 
-* **Fedora 24 (Twenty Four)** (32-bit and 64-bit) **[For Node >= 4.4.6]**
-* **Fedora 23 (Twenty Three)** (32-bit and 64-bit) **[For Node >= 4.2.x]**
+* **Fedora 26 (Twenty Six)** (32-bit and 64-bit) **[For Node >= 6.11.0]**
+* **Fedora 25 (Twenty Five)** (32-bit and 64-bit) **[For Node >= 4.7.2]**
 
 Equivalent versions of Korora Linux should also be supported.
 
@@ -330,6 +316,14 @@ Note that the Node.js packages for EL 5 (RHEL5 and CentOS 5) depend on the [EPEL
 
 Run as root on RHEL, CentOS, CloudLinux or Fedora:
 
+**NodeJS 9.x**
+
+* NOTE: If you are using RHEL 6 or CentOS 6, you might want to read about [running Node.js >= 4.x on older distros](https://github.com/nodesource/distributions/blob/master/OLDER_DISTROS.md).
+
+```text
+curl -sL https://rpm.nodesource.com/setup_9.x | bash -
+```
+
 **NodeJS 8.x**
 
 * NOTE: If you are using RHEL 6 or CentOS 6, you might want to read about [running Node.js >= 4.x on older distros](https://github.com/nodesource/distributions/blob/master/OLDER_DISTROS.md).
@@ -338,28 +332,12 @@ Run as root on RHEL, CentOS, CloudLinux or Fedora:
 curl -sL https://rpm.nodesource.com/setup_8.x | bash -
 ```
 
-**NodeJS 7.x**
-
-* NOTE: If you are using RHEL 6 or CentOS 6, you might want to read about [running Node.js >= 4.x on older distros](https://github.com/nodesource/distributions/blob/master/OLDER_DISTROS.md).
-
-```text
-curl -sL https://rpm.nodesource.com/setup_7.x | bash -
-```
-
 **NodeJS 6.x**
 
 * NOTE: If you are using RHEL 6 or CentOS 6, you might want to read about [running Node.js >= 4.x on older distros](https://github.com/nodesource/distributions/blob/master/OLDER_DISTROS.md).
 
 ```text
 curl -sL https://rpm.nodesource.com/setup_6.x | bash -
-```
-
-**NodeJS 5.x**
-
-* NOTE: If you are using RHEL 6 or CentOS 6, you might want to read about [running Node.js >= 4.x on older distros](https://github.com/nodesource/distributions/blob/master/OLDER_DISTROS.md).
-
-```text
-curl -sL https://rpm.nodesource.com/setup_5.x | bash -
 ```
 
 **NodeJS 4.x**
